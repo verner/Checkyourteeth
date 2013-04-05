@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Checkyourteeth
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    -if flash[:notice]
+      .notice
+    =flash[:notice]
+    -if flash[:alert]
+      .alert
+    =flash[:alert]
+    = yield
+
+   
